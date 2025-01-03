@@ -14,6 +14,13 @@ import Login from './pages/Login';
 import DoctorAppointments from './pages/Doctor/DoctorAppointments';
 import DoctorDashboard from './pages/Doctor/DoctorDashboard';
 import DoctorProfile from './pages/Doctor/DoctorProfile';
+import axios from 'axios';
+
+axios.defaults.withCredentials=true;
+const handleSubmit=(e)=>{
+  e.preventDefault();
+  axios.post('https://prescripto-main-api.vercel.app/');
+}
 
 const App = () => {
 

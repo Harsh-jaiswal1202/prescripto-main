@@ -12,7 +12,14 @@ import MyProfile from './pages/MyProfile'
 import Footer from './components/Footer'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Verify from './pages/Verify'
+import Verify from './pages/Verify';
+import axios from 'axios';
+
+axios.defaults.withCredentials=true;
+const handleSubmit=(e)=>{
+  e.preventDefault();
+  axios.post('https://prescripto-main-api.vercel.app/');
+}
 
 // const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 const App = () => {
