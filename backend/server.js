@@ -17,7 +17,7 @@ connectCloudinary()
 app.use(express.json())
 app.use(cors(
   {
-    origin:["https://prescripto-main-api.vercel.app/"],
+    origin:["https://prescripto-main.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
   }
